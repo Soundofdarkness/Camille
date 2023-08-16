@@ -56,19 +56,11 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore -p:version=$env:CAMI_VERSION
 
-      - name: Install & Start League Client
-        id: league-client
-        uses: magisteriis/setup-league-client@ea5ea0748d459cb8e4bade9d50d2f81b70f009f7
-        with:
-          username: ${{ secrets.LOL_USERNAME }}
-          password: ${{ secrets.LOL_PASSWORD }}
-          region: NA
-
-      - name: Test
-        if: ${{ github.event_name != 'pull_request' }}
-        env:
-          RGAPI_KEY: ${{ secrets.RGAPI_KEY }}
-        run: dotnet test --no-restore --verbosity minimal
+      #- name: Test
+      #  if: ${{ github.event_name != 'pull_request' }}
+      #  env:
+      #    RGAPI_KEY: ${{ secrets.RGAPI_KEY }}
+      #  run: dotnet test --no-restore --verbosity minimal
 
       - name: 'Check Changes & Publish Docs'
         shell: pwsh
@@ -77,9 +69,9 @@ jobs:
           Write-Output "CAMI_DO_DEPLOY=$env:CAMI_DO_DEPLOY" | Out-File -Append -FilePath $env:GITHUB_ENV
           Write-Output "CAMI_VERSION=$env:CAMI_VERSION"     | Out-File -Append -FilePath $env:GITHUB_ENV
           Write-Output "CAMI_SPEC_HASH=$env:CAMI_SPEC_HASH" | Out-File -Append -FilePath $env:GITHUB_ENV
-
+          
       - name: Publish to NuGet
-        if: ${{ success() && env.CAMI_DO_DEPLOY }}
+        if: false
         shell: pwsh
         env:
           NUGET_KEY: ${{ secrets.NUGET_KEY }}
@@ -91,5 +83,5 @@ jobs:
         shell: pwsh
         env:
           NUGET_KEY: ${{ secrets.GITHUB_TOKEN }}
-          NUGET_SOURCE: 'https://nuget.pkg.github.com/MingweiSamuel/index.json'
+          NUGET_SOURCE: 'https://nuget.pkg.github.com/Soundofdarkness/index.json'
         run: dotnet nuget push "src\*\bin\Release\*.$env:CAMI_VERSION.nupkg" --source $env:NUGET_SOURCE --api-key $env:NUGET_KEY --skip-duplicate
