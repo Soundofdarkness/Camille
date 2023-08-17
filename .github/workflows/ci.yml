@@ -50,9 +50,12 @@ jobs:
 
       - name: Install dependencies
         run: dotnet restore
-      - name: Build templates
-        # For some reason `dotnet build` doesn't find the generated `*.cs` files if we don't do this in a separate step.
-        run: dotnet build --configuration Release --no-restore --target:DispatchToInnerBuilds
+      - name: Install srcgen dependencies
+        run: cd srcgen && npm ci
+      - name: Trigger Download
+        run: dotnet msbuild -target:DownloadTemplateDataTrigger
+        # This will error out since it can't find that target in the test projects.
+        continue-on-error: true
       - name: Build
         run: dotnet build --configuration Release --no-restore -p:version=$env:CAMI_VERSION
 
