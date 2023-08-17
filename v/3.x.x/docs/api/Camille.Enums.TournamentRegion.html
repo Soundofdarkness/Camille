@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum RegionalRoute
+    <title>Enum TournamentRegion
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum RegionalRoute
+    <meta name="title" content="Enum TournamentRegion
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -68,20 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Camille.Enums.RegionalRoute">
+            <article class="content wrap" id="_content" data-uid="Camille.Enums.TournamentRegion">
   
   
-  <h1 id="Camille_Enums_RegionalRoute" data-uid="Camille.Enums.RegionalRoute" class="text-break">Enum RegionalRoute
+  <h1 id="Camille_Enums_TournamentRegion" data-uid="Camille.Enums.TournamentRegion" class="text-break">Enum TournamentRegion
   </h1>
-  <div class="markdown level0 summary"><p>Regional routes, used in tournament services, Legends of Runeterra (LoR), and some other endpoints.</p>
+  <div class="markdown level0 summary"><p>Tournament regions for League of Legends (LoL) used in TournamentStubV4 and TournamentV4's
+RegisterProviderData method.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Camille.Enums.html">Camille.Enums</a></h6>
   <h6><strong>Assembly</strong>: Camille.Enums.dll</h6>
-  <h5 id="Camille_Enums_RegionalRoute_syntax">Syntax</h5>
+  <h5 id="Camille_Enums_TournamentRegion_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum RegionalRoute : byte</code></pre>
+public enum TournamentRegion : byte</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -94,39 +95,63 @@ public enum RegionalRoute : byte</code></pre>
     <thead>
     <tbody>
       <tr>
-        <td id="Camille_Enums_RegionalRoute_AMERICAS">AMERICAS</td>
-        <td><p>North and South America.</p>
-<p><code>1</code> (riotapi-schema ID/repr)</p>
+        <td id="Camille_Enums_TournamentRegion_BR">BR</td>
+        <td><p>Brazil.</p>
+<p>For br1.</p>
 </td>
       </tr>
       <tr>
-        <td id="Camille_Enums_RegionalRoute_APAC">APAC</td>
-        <td><p>Asia-Pacific, deprecated, for some old matches in <code>lor-match-v1</code>.</p>
-<p><code>10</code> (riotapi-schema ID/repr)</p>
+        <td id="Camille_Enums_TournamentRegion_EUNE">EUNE</td>
+        <td><p>Europe, Northeast.</p>
+<p>For eun1.</p>
 </td>
       </tr>
       <tr>
-        <td id="Camille_Enums_RegionalRoute_ASIA">ASIA</td>
-        <td><p>Asia, used for LoL matches (<code>match-v5</code>) and TFT matches (<code>tft-match-v1</code>).</p>
-<p><code>2</code> (riotapi-schema ID/repr)</p>
+        <td id="Camille_Enums_TournamentRegion_EUW">EUW</td>
+        <td><p>Europe, West.</p>
+<p>For euw1.</p>
 </td>
       </tr>
       <tr>
-        <td id="Camille_Enums_RegionalRoute_ESPORTS">ESPORTS</td>
-        <td><p>Special esports platform for <code>account-v1</code>. Do not confuse with the <code>esports</code> Valorant platform route.</p>
-<p><code>11</code> (riotapi-schema ID/repr)</p>
+        <td id="Camille_Enums_TournamentRegion_JP">JP</td>
+        <td><p>Japan.</p>
+<p>For jp1.</p>
 </td>
       </tr>
       <tr>
-        <td id="Camille_Enums_RegionalRoute_EUROPE">EUROPE</td>
-        <td><p>Europe.</p>
-<p><code>3</code> (riotapi-schema ID/repr)</p>
+        <td id="Camille_Enums_TournamentRegion_LAN">LAN</td>
+        <td><p>Latin America, North.</p>
+<p>For la1.</p>
 </td>
       </tr>
       <tr>
-        <td id="Camille_Enums_RegionalRoute_SEA">SEA</td>
-        <td><p>South East Asia, used for LoR, LoL matches (<code>match-v5</code>), and TFT matches (<code>tft-match-v1</code>).</p>
-<p><code>4</code> (riotapi-schema ID/repr)</p>
+        <td id="Camille_Enums_TournamentRegion_LAS">LAS</td>
+        <td><p>Latin America, South.</p>
+<p>For la2.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Camille_Enums_TournamentRegion_NA">NA</td>
+        <td><p>North America.</p>
+<p>For na1.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Camille_Enums_TournamentRegion_OCE">OCE</td>
+        <td><p>Oceana.</p>
+<p>For oc1.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Camille_Enums_TournamentRegion_PBE">PBE</td>
+        <td><p>Public Beta Environment, special beta testing platform. Located in North America.</p>
+<p>For pbe1.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Camille_Enums_TournamentRegion_TR">TR</td>
+        <td><p>Turkey</p>
+<p>For tr1.</p>
 </td>
       </tr>
     </tbody>
@@ -139,10 +164,10 @@ public enum RegionalRoute : byte</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Soundofdarkness/Camille/new/release/3.x.x/apiSpec/new?filename=Camille_Enums_RegionalRoute.md&amp;value=---%0Auid%3A%20Camille.Enums.RegionalRoute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Soundofdarkness/Camille/new/release/3.x.x/apiSpec/new?filename=Camille_Enums_TournamentRegion.md&amp;value=---%0Auid%3A%20Camille.Enums.TournamentRegion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Soundofdarkness/Camille/blob/release/3.x.x/src/Camille.Enums/gen/Route.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Soundofdarkness/Camille/blob/release/3.x.x/src/Camille.Enums/gen/Route.cs/#L295" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
