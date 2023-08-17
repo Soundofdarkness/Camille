@@ -4,6 +4,9 @@
 
 C# Library for the [Riot Games API](https://developer.riotgames.com/)
 
+This is a fork of [Camille](https://github.com/MingweiSamuel/Camille) by [MingweiSamuel](https://github.com/MingweiSamuel/).
+Most likely this for will only exist until the main repo is working again, since this here is just a hack.
+
 Camille's goals are _speed_, _reliability_, and _maintainability_. Camille handles rate limits and large requests with ease.
 Data classes are automatically generated from the
 [Riot API Reference](https://developer.riotgames.com/api-methods/) ([Swagger](http://www.mingweisamuel.com/riotapi-schema/tool/)).
@@ -52,7 +55,7 @@ var riotApi = RiotGamesApi.NewInstance(
     }.Build()
 );
 ```
-You can find all configuration options [here](https://github.com/MingweiSamuel/Camille/blob/gh-pages/v/3.x.x/_gen/Camille.RiotGames/RiotGamesApiConfig.cs).
+You can find all configuration options [here](https://github.com/Soundofdarkness/Camille/blob/gh-pages/v/3.x.x/_gen/Camille.RiotGames/RiotGamesApiConfig.cs).
 
 API methods are divided up into respective endpoints, corresponding to the left bar of the [API reference](https://developer.riotgames.com/api-methods/).
 
@@ -197,15 +200,15 @@ Match history for LugnutsK:
 
 ## Source Code
 
-Projects are located in [`src/`](https://github.com/MingweiSamuel/Camille/tree/release/3.x.x/src).
+Projects are located in [`src/`](https://github.com/Soundofdarkness/Camille/tree/release/3.x.x/src).
 
 ### Generated Classes
 
 The majority of the code in Camille is automatically generated. The generated sources are not commited to
-the master branch, but can be viewed [in the `gh-pages` branch](https://github.com/MingweiSamuel/Camille/tree/gh-pages/v/3.x.x/_gen)
+the master branch, but can be viewed [in the `gh-pages` branch](https://github.com/Soundofdarkness/Camille/tree/gh-pages/v/3.x.x/_gen)
 or when building locally.
 
 The actual code for generating these classes is in the
-[`srcgen` folder](https://github.com/MingweiSamuel/Camille/tree/release/3.x.x/srcgen).
+[`srcgen` folder](https://github.com/Soundofdarkness/Camille/tree/release/3.x.x/srcgen).
 The C#-generating code is in `*.cs.dt` files and is written in NodeJS, using
 [doT.js templates](https://olado.github.io/doT/index.html).
