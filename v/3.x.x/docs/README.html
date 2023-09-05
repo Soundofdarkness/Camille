@@ -64,6 +64,8 @@
 
 <p><a href="https://github.com/Soundofdarkness/Camille/actions?query=workflow%3ACI+branch%3Arelease%2F3.x.x"><img src="https://img.shields.io/github/workflow/status/Soundofdarkness/Camille/CI/release/3.x.x?label=release/3.x.x&amp;logo=github&amp;style=flat-square" alt="Github Actions"></a></p>
 <p>C# Library for the <a href="https://developer.riotgames.com/">Riot Games API</a></p>
+<p>This is a fork of <a href="https://github.com/MingweiSamuel/Camille">Camille</a> by <a href="https://github.com/MingweiSamuel/">MingweiSamuel</a>.
+Most likely this for will only exist until the main repo is working again, since this here is just a hack.</p>
 <p>Camille's goals are <em>speed</em>, <em>reliability</em>, and <em>maintainability</em>. Camille handles rate limits and large requests with ease.
 Data classes are automatically generated from the
 <a href="https://developer.riotgames.com/api-methods/">Riot API Reference</a> (<a href="http://www.mingweisamuel.com/riotapi-schema/tool/">Swagger</a>).</p>
@@ -102,7 +104,7 @@ var riotApi = RiotGamesApi.NewInstance(
     }.Build()
 );
 </code></pre>
-<p>You can find all configuration options <a href="https://github.com/MingweiSamuel/Camille/blob/gh-pages/v/3.x.x/_gen/Camille.RiotGames/RiotGamesApiConfig.cs">here</a>.</p>
+<p>You can find all configuration options <a href="https://github.com/Soundofdarkness/Camille/blob/gh-pages/v/3.x.x/_gen/Camille.RiotGames/RiotGamesApiConfig.cs">here</a>.</p>
 <p>API methods are divided up into respective endpoints, corresponding to the left bar of the <a href="https://developer.riotgames.com/api-methods/">API reference</a>.</p>
 <h3 id="example">Example</h3>
 <h4 id="print-summoners-top-champions">Print Summoner's Top Champions</h4>
@@ -237,13 +239,13 @@ Match history for LugnutsK:
 ```
 -->
 <h2 id="source-code">Source Code</h2>
-<p>Projects are located in <a href="https://github.com/MingweiSamuel/Camille/tree/release/3.x.x/src"><code>src/</code></a>.</p>
+<p>Projects are located in <a href="https://github.com/Soundofdarkness/Camille/tree/release/3.x.x/src"><code>src/</code></a>.</p>
 <h3 id="generated-classes">Generated Classes</h3>
 <p>The majority of the code in Camille is automatically generated. The generated sources are not commited to
-the master branch, but can be viewed <a href="https://github.com/MingweiSamuel/Camille/tree/gh-pages/v/3.x.x/_gen">in the <code>gh-pages</code> branch</a>
+the master branch, but can be viewed <a href="https://github.com/Soundofdarkness/Camille/tree/gh-pages/v/3.x.x/_gen">in the <code>gh-pages</code> branch</a>
 or when building locally.</p>
 <p>The actual code for generating these classes is in the
-<a href="https://github.com/MingweiSamuel/Camille/tree/release/3.x.x/srcgen"><code>srcgen</code> folder</a>.
+<a href="https://github.com/Soundofdarkness/Camille/tree/release/3.x.x/srcgen"><code>srcgen</code> folder</a>.
 The C#-generating code is in <code>*.cs.dt</code> files and is written in NodeJS, using
 <a href="https://olado.github.io/doT/index.html">doT.js templates</a>.</p>
 </article>
